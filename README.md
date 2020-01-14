@@ -1,5 +1,3 @@
-# Welcome to the [Building Your Own Programming Language](https://frontendmasters.com/courses/programming-language/) course!
-
 ## Getting started
 
 Before starting the course, please have [VSCode](https://code.visualstudio.com/) or another code editor installed. Make sure to install the testing framework [jest](https://jestjs.io/docs/en/getting-started).
