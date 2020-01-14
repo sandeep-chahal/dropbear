@@ -25,12 +25,18 @@ const tokenize = input => {
     }
 
     if (isNumber(character)) {
-      tokens.push({ type: 'Number', value: Number(character) });
-      cursor++;
+      let number = character;
+      while (isNumber(input[++cursor])) {
+        number += input[cursor];
+      }
+      tokens.push({ type: 'Number', value: Number(number) });
     }
     if (isLetter(character)) {
-      tokens.push({ type: 'Name', value: character });
-      cursor++;
+      let letter = character;
+      while (isLetter(input[++cursor])) {
+        letter += input[cursor];
+      }
+      tokens.push({ type: 'Name', value: letter });
     }
   }
   return tokens;
