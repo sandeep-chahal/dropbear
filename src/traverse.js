@@ -13,6 +13,11 @@ const traverseNode = ({ node, parent, visitor }) => {
     methods.exit({ node, parent });
   }
 };
+const traverseArray = ({ array, parent, visitor }) => {
+  array.forEach(node => {
+    traverseNode({ node, parent, visitor });
+  });
+};
 
 const traverse = (node, visitor) => {};
 
